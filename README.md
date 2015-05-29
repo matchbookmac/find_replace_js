@@ -29,7 +29,7 @@ Clone this repo with
 
 Start App:
 
-Navigate to your favorite browser, enter the file > open dialog, open the `*.html*` file in the root directory of the project folder.
+Navigate to your favorite browser, enter the `file > open` dialog, open the *`.html`* file in the root directory of the project folder.
 
 
 ### License ###
