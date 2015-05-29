@@ -1,26 +1,26 @@
+describe('splitEverything', function() {
+  it("splits separates words from spaces, and puts both into an array", function() {
+    var testSentence = 'It\'s my\n    watch\nat eight o\'clock   ';
+    expect(splitEverything(testSentence)).to.eql(['It\'s', " ", 'my', '\n    ', 'watch', '\n', 'at', " ", 'eight', " ", 'o\'clock', "   "]);
+  });
+});
+
 describe('cleanPunctuation', function() {
   it("removes punctuation from a string, and returns an array of downcased words", function() {
     var testSentence = 'It\'s my watch at eight o\'clock';
-    expect(cleanPunctuation(testSentence)).to.eql(['its', 'my', 'watch', 'at', 'eight', 'oclock']);
+    expect(cleanPunctuation(testSentence)).to.eql(['its', " ", 'my', " ", 'watch', " ", 'at', " ", 'eight', " ", 'oclock']);
   });
 });
 
-describe('cleanWhitespace', function() {
-  it("removes extraneous spaces, and returns an array of words, maintaining new lines or returs  as separate words", function() {
-    var testSentence = 'It\'s my\n    watch\nat eight o\'clock   ';
-    expect(cleanWhitespace(testSentence)).to.eql(['It\'s', 'my', '\n', 'watch', '\n', 'at', 'eight', 'o\'clock']);
-  });
-});
-
-describe('cleanWhitespace & cleanPunctuation', function() {
+describe('splitEverything & cleanPunctuation', function() {
   it("When used in concert (whitespace then punctuation), these methods remove extraneous spaces, as well as punctuation and returns an array of downcased words , maintaining new lines or returs  as separate words", function() {
     var testSentence = 'It\'s my\n    watch\nat eight o\'clock   ';
-    expect(cleanPunctuation(cleanWhitespace(testSentence))).to.eql(['its', 'my', '\n', 'watch', '\n', 'at', 'eight', 'oclock']);
+    expect(cleanPunctuation(splitEverything(testSentence))).to.eql(['its', 'my', '\n', 'watch', '\n', 'at', 'eight', 'oclock']);
   });
 
   it("When used in concert (punctuation then whitespace), these methods remove extraneous spaces, as well as punctuation and returns an array of downcased words , maintaining new lines or returs  as separate words", function() {
     var testSentence = 'It\'s my\n    watch\nat eight o\'clock   ';
-    expect(cleanWhitespace(cleanPunctuation(testSentence))).to.eql(['its', 'my', '\n', 'watch', '\n', 'at', 'eight', 'oclock']);
+    expect(splitEverything(cleanPunctuation(testSentence))).to.eql(['its', 'my', '\n', 'watch', '\n', 'at', 'eight', 'oclock']);
   });
 });
 

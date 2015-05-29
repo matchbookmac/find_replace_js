@@ -10,7 +10,7 @@ $( document ).ready(function() {
 
 //raw js
 var findReplaceWord = function(word, newWord, string) {
-  var splitString = cleanWhitespace(string);
+  var splitString = splitEverything(string);
   var cleanString = cleanPunctuation(splitString);
 
   for (var i = 0; i < cleanString.length; i++) {
@@ -26,13 +26,13 @@ var cleanPunctuation = function(input) {
   var string = inputToString(input);
   var punctuationRegex = new RegExp('[^\\w\\s]','g');
   string = string.replace(punctuationRegex, '').toLowerCase();
-  var words = string.split(" ");
+  var words = splitEverything(string);
   return words;
 };
 
-var cleanWhitespace = function(input) {
+var splitEverything = function(input) {
   var string = inputToString(input);
-  var regex = new RegExp('([^\\s]+)|[\\r\\n]', 'g');
+  var regex = new RegExp('[^\\s]+|[\\s]+', 'g');
   var words = string.match(regex);
   return words;
 };
@@ -40,7 +40,7 @@ var cleanWhitespace = function(input) {
 var inputToString = function (input) {
   var string = "";
   if (Array.isArray(input)) {
-    string = input.join(" ");
+    string = input.join("");
   } else if (typeof input !== "string") {
     return "Please input a string or an array."
   } else {
