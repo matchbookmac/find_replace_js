@@ -1,4 +1,4 @@
-## APP NAME
+## Find and Replace
 
 <a href="APP LINK IF APPLICABLE" target="#"><APP LINK NAME></a>
 
@@ -10,9 +10,9 @@ GNU General Public License, version 3 (see below). Copyright (c) 2015 Ian C. Mac
 
 ### Description
 
-**APP NAME**
+**Find and Replace**
 
-<DESCRIPTION>
+A user may enter some text to search. They also provide a word to find in the text, and a new word to replace it with.
 
 ### Author(s)
 
@@ -20,11 +20,11 @@ Ian MacDonald
 
 ### Setup
 
-This app was written in `JavaScript`, `HTML`, and `JQuery`.
+This app was written in `JavaScript`, `HTML`, and `jQuery`.
 
 Clone this repo with
 ```console
-> git clone https://github.com/matchbookmac/<REPO NAME>.git
+> git clone https://github.com/matchbookmac/find_replace_js.git
 ```
 
 Start App:
@@ -37,7 +37,7 @@ Copyright  (C)  2015  Ian C. MacDonald
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or    
+the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
 
 This program is distributed in the hope that it will be useful,
