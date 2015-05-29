@@ -9,6 +9,18 @@ $( document ).ready(function() {
 });
 
 //raw js
+var findWord = function(word, string) {
+  var cleanString = cleanSentence(string);
+  var found = false;
+  for (var i = 0; i < cleanString.length; i++) {
+    if (cleanString[i] === word) {
+      found = true;
+    }
+  };
+  return found;
+};
+
+
 var cleanSentence = function(string) {
   var punctuationRegex = new RegExp('[^\\w\\s]','g');
   string = string.replace(punctuationRegex, '').toLowerCase();
