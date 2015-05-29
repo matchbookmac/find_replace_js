@@ -12,6 +12,13 @@ describe('cleanWhitespace', function() {
   });
 });
 
+describe('cleanWhitespace & cleanPunctuation', function() {
+  it("When used in concert, these methods remove extraneous spaces, and new line or return characters, as well as punctuation and returns an array of downcased words", function() {
+    var testSentence = 'It\'s my\n    watch\nat eight o\'clock   '
+    expect(cleanPunctuation(cleanWhitespace(testSentence))).to.eql(['its', 'my', 'watch', 'at', 'eight', 'oclock']);
+  });
+});
+
 
 describe('findReplaceWord', function () {
   it("returns the original string with the word searched for replaced by the new word provided.", function() {

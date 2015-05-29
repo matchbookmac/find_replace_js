@@ -21,7 +21,14 @@ var findReplaceWord = function(word, newWord, string) {
 };
 
 
-var cleanPunctuation = function(string) {
+var cleanPunctuation = function(input) {
+  var string = input;
+  if (Array.isArray(string)) {
+    string = string.join(" ");
+  } else if (typeof string !== "string") {
+    return "Please input a string or an array."
+  }
+
   var punctuationRegex = new RegExp('[^\\w\\s]','g');
   string = string.replace(punctuationRegex, '').toLowerCase();
   var words = string.split(" ");
