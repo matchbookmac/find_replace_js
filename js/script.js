@@ -9,23 +9,27 @@ $( document ).ready(function() {
 });
 
 //raw js
-var findWord = function(word, string) {
+var findReplaceWord = function(word, newWord, string) {
   var cleanString = cleanSentence(string);
-  var found = 0;
+  var splitStrig = string.split(" ");
   for (var i = 0; i < cleanString.length; i++) {
     if (cleanString[i] === word) {
-      found++;
+      cleanString[i] = newWord;
     }
   };
-  return found;
+  return cleanString;
 };
 
 
-var cleanSentence = function(string) {
+var cleanPunctuation = function(string) {
   var punctuationRegex = new RegExp('[^\\w\\s]','g');
   string = string.replace(punctuationRegex, '').toLowerCase();
+  var words = string.split(" ");
+  return words;
+};
 
-  var regex = new RegExp('(\\w+)', 'g');
+var cleanWhitespace = function(string) {
+  var regex = new RegExp('[^\\n\\r\\s]+', 'g');
   var words = string.match(regex);
   return words;
 };
