@@ -17,4 +17,9 @@ describe('findReplaceWord', function () {
     var testSentence = 'My \nwatch \n says It\'s my watch\n   at    eight o\'clock';
     expect(findReplaceWord('watch', 'sextant', testSentence)).to.equal('My \nsextant \n says It\'s my sextant\n   at    eight o\'clock');
   });
+
+  it("returns the original string with the word searched for replaced by the new word provided, regardless of the search word's capitalization.", function() {
+    var testSentence = 'My \nwatch \n says It\'s my watch\n   at    eight o\'clock';
+    expect(findReplaceWord('My', 'sextant', testSentence)).to.equal('sextant \nwatch \n says It\'s sextant watch\n   at    eight o\'clock');
+  });
 });
