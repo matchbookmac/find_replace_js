@@ -12,7 +12,7 @@ GNU General Public License, version 3 (see below). Copyright (c) 2015 Ian C. Mac
 
 **Find and Replace**
 
-A user may enter some text to search. They also provide a word to find in the text, and a new word to replace it with.
+A user may enter some text to search. They also provide a word to find in the text, and a new word to replace it with. The app with then find all instances of the word to be searched for, and replace those instances with the new word. The app will then present the word that the user searched for and the original text alongside the replacement word and the new text.
 
 ### Author(s)
 
