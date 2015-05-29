@@ -6,8 +6,13 @@ describe('cleanSentence', function() {
 });
 
 describe('findWord', function () {
-  it("returns true of the word provided is found in the string provided", function() {
-    var testSentence = 'It\'s my watch\nat eight o\'clock'
-    expect(findWord('my', testSentence)).to.equal(true);
+  it("returns the number of times a word provided is found in the string provided", function() {
+    var testSentence = 'My watch says It\'s my watch\nat eight o\'clock'
+    expect(findWord('my', testSentence)).to.equal(2);
+  });
+
+  it("returns the number of times a word provided is found in the string provided", function() {
+    var testSentence = 'My watch says It\'s my watch\nat eight o\'clock'
+    expect(findWord('watch', testSentence)).to.equal(2);
   });
 });

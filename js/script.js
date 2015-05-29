@@ -11,10 +11,10 @@ $( document ).ready(function() {
 //raw js
 var findWord = function(word, string) {
   var cleanString = cleanSentence(string);
-  var found = false;
+  var found = 0;
   for (var i = 0; i < cleanString.length; i++) {
     if (cleanString[i] === word) {
-      found = true;
+      found++;
     }
   };
   return found;
