@@ -19,7 +19,7 @@ var findReplaceWord = function(word, newWord, string) {
     }
   };
 
-  return splitString.join(" ");
+  return joinWithNewLines(splitString);
 };
 
 var cleanPunctuation = function(input) {
