@@ -32,10 +32,7 @@ var cleanPunctuation = function(input) {
 
 var cleanWhitespace = function(input) {
   var string = inputToString(input);
-  // var regex = new RegExp('[^\\n\\r\\s]+', 'g');
   var regex = new RegExp('([^\\s]+)|[\\r\\n]', 'g');
-
-  // ([^\s]+)|[\r\n]
   var words = string.match(regex);
   return words;
 };
@@ -49,5 +46,12 @@ var inputToString = function (input) {
   } else {
     string = input;
   }
+  return string;
+};
+
+var joinWithNewLines = function (input) {
+  var string = inputToString(input);
+  var regex = new RegExp('\\s[\\r\\n]+\\s', 'g');
+  string = string.replace(regex, '\n');
   return string;
 };
