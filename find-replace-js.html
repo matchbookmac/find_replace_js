@@ -21,16 +21,23 @@
       <h1 class="page-header text-center">TEST</h1>
       <div class="col-md-6 col-md-offset-3">
         <form id="user_input">
-          <div class="form-group form-inline stretch">
-            <label class="sr-only" for="word">Word to Find</label>
-            <input type="text" name="word" id="word" class="form-control" placeholder="Find Word:" autofocus>
-            <label class="sr-only" for="new_word">Replacement Word</label>
-            <input type="text" name="new_word" id="new_word" class="form-control" placeholder="Replace With:" autofocus>
+          <div class="form-group">
+            <div class="row">
+              <div class="col-md-6">
+                <label class="sr-only" for="word">Word to Find</label>
+                <input type="text" name="word" id="word" class="form-control" placeholder="Find Word:" autofocus>
+              </div>
+              <div class="col-md-6">
+                <label class="sr-only" for="new_word">Replacement Word</label>
+                <input type="text" name="new_word" id="new_word" class="form-control" placeholder="Replace With:" autofocus>
+              </div>
+            </div>
           </div>
           <div class="form-group">
             <label for="text_input">Enter the text in which you would like to replace a word below:</label>
-            <textarea name="text_input" id="text_input" class="form-control" rows="4"></textarea>
+            <textarea name="text_input" id="text_input" class="form-control" rows="8"></textarea>
           </div>
+          <button type="submit" class="btn btn-primary stretch">Replace</button>
         </form>
       </div>
     </div>
