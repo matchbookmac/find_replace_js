@@ -1,6 +1,5 @@
-#jqtest {
-  background-color: black;
-  color: white;
+.results {
+  display: none;
 }
 
 .stretch {

@@ -4,12 +4,20 @@
 //jQuery
 $(document).ready(function() {
   $("form#user_input").submit(function(event) {
+
+    $(".replaced").empty();
+
     var word = $("#word").val();
     var newWord = $("#new_word").val();
     var text = $("#text_input").val();
     var newText = findReplaceWord(word, newWord, text)
-    console.log(newText);
 
+    $(".word-found").text(word);
+    $(".replaced-with").text(newWord);
+    $(".original-text").text(text);
+    $(".new-text").text(newText);
+
+    $(".results").show();
     event.preventDefault();
   });
 });
@@ -19,7 +27,7 @@ var findReplaceWord = function(word, newWord, string) {
   var splitString = splitEverything(string);
   var cleanString = cleanPunctuation(string);
   word = word.toLowerCase();
-  
+
   for (var i = 0; i < cleanString.length; i++) {
     if (cleanString[i] === word) {
       splitString[i] = newWord;

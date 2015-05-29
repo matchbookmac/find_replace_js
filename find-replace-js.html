@@ -2,23 +2,23 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Find and Replace</title>
 
     <!-- bootstrap styles -->
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
     <!-- custom styles -->
     <link rel="stylesheet" href="css/styles.css" />
-    <!-- bootstrap js -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <!-- jQuery -->
     <script src='js/lib/jquery-1.11.3.js'></script>
+    <!-- bootstrap js -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <!-- Custom Scripts -->
     <script src='js/script.js'></script>
 
   </head>
   <body>
     <div class="container">
-      <h1 class="page-header text-center">TEST</h1>
+      <h1 class="page-header text-center">Find and Replace</h1>
       <div class="col-md-6 col-md-offset-3">
         <form id="user_input">
           <div class="form-group">
@@ -39,6 +39,20 @@
           </div>
           <button type="submit" class="btn btn-primary stretch">Replace</button>
         </form>
+        <br>
+        <div class="results">
+          <p class="lead">Word Found: <strong><span class="word-found replaced"></span></strong> <span class="pull-right">Replaced With: <strong><span class="replaced replaced-with"></span></strong></span></p>
+          <div class="row">
+            <div class="col-md-6">
+              <p class="lead">Original text:</p>
+              <p class="original-text replaced"></p>
+            </div>
+            <div class="col-md-6">
+              <p class="lead">New text:</p>
+              <p class="new-text replaced"></p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>
